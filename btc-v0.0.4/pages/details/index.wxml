@@ -1,0 +1,223 @@
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class='wrap'>
+  <view class='compareView clearfix wrap'>
+    <view class='compareHead clearfix'>
+      <view class='font fl '  bindtap='searchOne'>{{left.symbol}}</view>
+      <view class='font fr '  bindtap='searchTwo'>{{right.symbol}}</view>
+      <view class='fl search ' hover-class='op2' bindtap='searchOne' data-id='1'>更换币种</view>
+      <view class='fl search ' hover-class='op2' bindtap='searchTwo' data-id='2'>更换币种</view>
+    </view>
+  </view>
+</view>
+<view class='debug clearfix'>
+  <!--blockOne start-->
+  <block>
+    <view class='baseComponent clearfix format'>
+      <view class='title'>基础信息</view>
+      <!--blockChild1  -->
+      <view class='clearfix'>
+        <view class='p50 fl'>
+          <view class=' base cen bx'>
+            <text>￥{{left.market_value}}\n</text>
+            <text class='sz'>{{left.symbol}}\n流通市值</text>
+          </view>
+        </view>
+        <view class='p50 fr'>
+          <view class=' base base1 cen bx'>
+            <text>￥{{right.market_value}}\n</text>
+            <text class='sz'>{{right.symbol}}\n流通市值</text>
+          </view>
+        </view>
+      </view>
+      <!--blockChild2  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{left.rmb_price}}\n</text>
+          <text class='defaultColor'>当前价格(￥)</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{right.rmb_price}}\n</text>
+          <text class='defaultColor'>当前价格(￥)</text>
+        </view>
+      </view>
+      <!--blockChild3  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{left.market_sort}}\n</text>
+          <text class='defaultColor'>市值排名</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{right.market_sort}}\n</text>
+          <text class='defaultColor'>市值排名</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!--blockOne end-->
+  <!--blockTwo start-->
+  <block>
+    <view class='TransactionData24H clearfix format'>
+      <view class='title'>24H交易数据</view>
+      <!--blockChild1  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{left.max_price}}\n</text>
+          <text class='defaultColor'>最高价(￥)</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{right.max_price}}\n</text>
+          <text class='defaultColor'>最高价(￥)</text>
+        </view>
+      </view>
+      <!--blockChild2  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{left.min_price}}\n</text>
+          <text class='defaultColor'>最低价(￥)</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{right.min_price}}\n</text>
+          <text class='defaultColor'>最低价(￥)</text>
+        </view>
+      </view>
+      <!--blockChild3  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class="defaultText {{left.fluctuation<0 ? 'down':'up'}}">{{left.fluctuation}}%\n</text>
+          <text class='defaultColor'>涨幅</text>
+        </view>
+        <view class='p50 fr'>
+          <text class="defaultText {{right.fluctuation<0 ? 'down':'up'}}">{{right.fluctuation}}%\n</text>
+          <text class='defaultColor'>涨幅</text>
+        </view>
+      </view>
+      <!--blockChild4  -->
+      <!-- <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{left.trade_volume}}\n</text>
+          <text class='defaultColor'>成交额(￥)</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{right.trade_volume}}\n</text>
+          <text class='defaultColor'>成交额(￥)</text>
+        </view>
+      </view> -->
+    </view>
+  </block>
+  <!--blockTwo end-->
+  <!--blockThree start-->
+  <block>
+    <view class='TransactionData24H clearfix format'>
+      <view class='title'>
+        <text class='fl'>24H场外数据</text>
+        <text class='exclusive fl'>独家</text>
+        <image class='fl i' src='../../img/explain.png' bindtap='toHelp'></image>
+      </view>
+      <!--blockChild1  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{left.payin_limit}}\n</text>
+          <text class='defaultColor'>交易所充币额(￥)</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{right.payin_limit}}\n</text>
+          <text class='defaultColor'>交易所充币额(￥)</text>
+        </view>
+      </view>
+      <!--blockChild2  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{left.payout_limit}}\n</text>
+          <text class='defaultColor'>交易所提币额(￥)</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{right.payout_limit}}\n</text>
+          <text class='defaultColor'>交易所提币额(￥)</text>
+        </view>
+      </view>
+      <!--blockChild3  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{left.address_amount}}\n</text>
+          <text class='defaultColor'>新增钱包地址数</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{right.address_amount}}\n</text>
+          <text class='defaultColor'>新增钱包地址数</text>
+        </view>
+      </view>
+      <!--blockChild4  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{left.trade_times}}\n</text>
+          <text class='defaultColor'>新增转账数</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{right.trade_times}}\n</text>
+          <text class='defaultColor'>新增转账数</text>
+        </view>
+      </view>
+      <!--blockChild5  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{left.trade_limit}}\n</text>
+          <text class='defaultColor'>转账额(￥)</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{right.trade_limit}}\n</text>
+          <text class='defaultColor'>转账额(￥)</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!--blockThree end-->
+  <!--blockFour start-->
+  <block>
+    <view class='token clearfix format'>
+      <view class='title'>
+        <text class='fl'>Token分布</text>
+        <text class='exclusive fl'>独家</text>
+      </view>
+      <!--blockChild1  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{topLeft.t10.proportion}}%\n</text>
+          <text class='defaultColor'>TOP10地址持币占比</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{topRight.t10.proportion}}%\n</text>
+          <text class='defaultColor'>TOP10地址持币占比</text>
+        </view>
+      </view>
+      <!--blockChild2  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{topLeft.t50.proportion}}%\n</text>
+          <text class='defaultColor'>TOP50地址持币占比</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{topRight.t50.proportion}}%\n</text>
+          <text class='defaultColor'>TOP50地址持币占比</text>
+        </view>
+      </view>
+      <!--blockChild3  -->
+      <view class='clearfix mtb10'>
+        <view class='p50 fl'>
+          <text class='defaultText'>{{topLeft.t100.proportion}}%\n</text>
+          <text class='defaultColor'>TOP100地址持币占比</text>
+        </view>
+        <view class='p50 fr'>
+          <text class='defaultText'>{{topRight.t100.proportion}}%\n</text>
+          <text class='defaultColor'>TOP100地址持币占比</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!--blockFour end-->
+  <view class='share'>
+    <button class='shareBtn relative' open-type="share" hover-class='op2'>
+      <image class='shareImg' src='../../img/share.png'></image>
+      <text>分享</text>
+    </button>
+  </view>
+</view>

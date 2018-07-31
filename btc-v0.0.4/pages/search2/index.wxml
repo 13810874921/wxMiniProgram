@@ -1,0 +1,25 @@
+<view class='searchPage'>
+  <image class='searchImg' src='../../img/search.png'></image>
+  <input autocapitalize="characters" class='search' placeholder="搜索token名称" confirm-type='search' bindinput="bindinput" placeholder-style='color:#C8C7CD;' value='{{inputValue}}'></input>
+  <text class='cancle' bindtap='cancle'>取消</text>
+</view>
+<scroll-view scroll-y="true" class="scrollview bx">
+  <view class='category ' wx:for="{{bindSource}}" wx:key="{{index}}">
+    <view id="{{item.symbol}}" class="itemview" bindtap="itemtap" data-check='{{index}}'>
+      <text class='name'>{{item.symbol}}</text>
+      <!-- <text class='allName'>{{item.guid}}</text> -->
+    </view>
+  </view>
+</scroll-view>
+<block wx:if='{{hotShow || prefix.length==0}}'>
+  <view class='cate'>
+    <view class='title'>热门币种</view>
+    <view class='categoryList clearfix'>
+      <view class='category' wx:for='{{hot}}' wx:key="{{index}}" bindtap='itemtap' data-id='{{index}}'>
+        <text class='name'>{{item.symbol}}</text>
+      </view>
+    </view>
+  </view>
+   <view class='toast'>暂时只可添加ERC20协议币种</view> 
+</block>
+<view class='noSearch' wx:elif='{{prefix.length>0   &&  bindSource.length==0}}'>暂未找到相关的ERC20协议币种，请重新搜索</view> 

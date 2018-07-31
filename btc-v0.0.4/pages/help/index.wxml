@@ -1,0 +1,28 @@
+<view class='debug'>
+  <block>
+    <view class='title'>新增钱包地址</view>
+    <view class='contain'>
+      <text>新增钱包地址是指在某个时间段内新持有A币种的钱包地址，发生了新的交易，出现了新的地址数量。\n</text>
+      <text>在一定程度上代表着这个币种的热度和吸引力度。</text>
+    </view>
+  </block>
+  <block>
+    <view class='title'>新增交易</view>
+    <view class='contain'>
+      <text>新增交易数是指在某个时间段内A地址往B地址发生了转账交易次数。\n</text>
+      <text>新增钱包地址和新增交易的区别在于，新增交易包含了新增钱包地址，相当于App数据统计中的日活。</text>
+    </view>
+  </block>
+  <block>
+    <view class='title'>交易所充提币额</view>
+    <view class='contain'>
+      <text>充币指个人地址往交易所充币。提币反过来，指个人从交易所提出币。乘以当前币种价格就是充提币额。</text>
+    </view>
+  </block>
+  <block>
+    <view class='title'>转账额</view>
+    <view class='contain'>
+      <text>转账额就是在某个时间段内，将链上转账产生的该币进行叠加，乘以价格。</text>
+    </view>
+  </block>
+</view>

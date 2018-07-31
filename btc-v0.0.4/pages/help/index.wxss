@@ -1,0 +1,25 @@
+.title {
+  font-weight: 600;
+  padding: 28px 16px 16px;
+  font-size: 20px;
+}
+
+.contain {
+  width: 90%;
+  margin: auto;
+  font-size: 15px;
+  line-height: 28px;
+}
+
+.contain text {
+  display: inline-block;
+  color: #4a4a4a;
+}
+
+.contain text:first-child {
+  margin-bottom: 10px;
+}
+
+.debug {
+  padding-bottom: 28px;
+}

@@ -1,0 +1,28 @@
+{
+	"description": "币币对比",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wx5c47bd83e05d2946",
+	"projectname": "%E5%B8%81%E5%B8%81%E5%AF%B9%E6%AF%94%EF%BC%88%E4%B8%AA%E4%BA%BA%E7%89%88%EF%BC%89",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": []
+		}
+	}
+}

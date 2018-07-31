@@ -1,0 +1,76 @@
+/* pages/search/index.wxss */
+
+.searchPage {
+  padding: 10px 16px 15px;
+  box-sizing: border-box;
+  height: 58px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  background:#f9f9f9;
+
+}
+
+.searchImg {
+  position:absolute;
+top:18px;
+width:20px;
+height:20px;
+left:23px;
+
+}
+
+.search {
+  color:#fe5000;
+  width: 75vw;
+  float: left;
+  border-radius: 10px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  background: #fff;
+  font-size: 15px;
+  height: 36px;background:#ebebeb;
+}
+
+.cancle {
+  color: #fe5000;
+  width: 13vw;
+  float: right;
+  text-align: center;
+  font-size: 15px;
+  line-height: 36px;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+.title{
+  font-weight:600;
+  font-size:20px;
+  margin:28px 16px 10px 16px;
+}
+.categoryList{
+  padding:0 16px 27px;
+  border-bottom:1px solid #eee;
+  
+}
+.category{
+  float:left;background:#eee;margin:10px 10px 0 0;padding:4px 15px;border-radius:20px;line-height:20px;
+}
+.name{
+  font-size:16px;
+}
+.allName{
+  font-size:14px;margin-left:10px;
+}
+.toast{
+  text-align:center;
+  font-size:13px;
+  margin-top:27px;
+   color:#9b9b9b;
+}
+.scrollview{padding:0 16px;}
+.noSearch{
+font-size:13px;
+text-align:center;
+line-height:20;
+color:#9b9b9b;
+}

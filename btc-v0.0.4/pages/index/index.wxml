@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="wrap">
+  <!-- <view class="chart-with-img" wx:for="{{charts}}" wx:for-item="chart" wx:key="{{chart.id}}">
+    <image src="../../img/icons/{{chart.id}}.png" mode="aspectFit" bindtap="open" data-chart="{{chart}}"></image>
+    {{chart.name}}
+  </view>     -->
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>
+  <view class='title'>选币对比</view>
+  <view class='contain clearfix'>
+    <view>
+        <view class='font'  bindtap='searchOne' style='width:40%;float:left;'>{{show1.symbol}}</view>
+        <view class='vs' style=''>VS</view>
+        <view class='font' bindtap='searchTwo' style='width:40%;float:right;' >{{show2.symbol}}</view>
+    </view>
+    <view class='fl search' hover-class='op2' bindtap='searchOne' data-id='1'>更换币种</view>
+    <view class='fr search' hover-class='op2' bindtap='searchTwo' data-id='2'>更换币种</view>
+    <!-- <view class='clear'></view> -->
+    <view class='clearfix'></view>
+    <view class='compare'>
+      <button class='compareBtn' bindtap='compare' hover-class='op2'>对比</button>
+    </view>
+  </view>
+</view>

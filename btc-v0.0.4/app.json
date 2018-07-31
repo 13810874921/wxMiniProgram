@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/search1/index",
+    "pages/search2/index",
+    "pages/details/index",
+    "pages/help/index"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "backgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "#f9f9f9",
+    "navigationBarTitleText": "币币对比",
+    "navigationBarTextStyle":"black"
+  }
+}
